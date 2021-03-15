@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url('../../../assets/images/pexels-anete-lusina-6353751.jpg');
-  background-size: contain;
+  background-size: cover;
 }
 
 .form-row {
