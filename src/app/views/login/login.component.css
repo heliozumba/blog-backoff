@@ -1,0 +1,61 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../assets/images/pexels-anete-lusina-6353751.jpg');
+  background-size: contain;
+}
+
+.form-row {
+  height: inherit;
+  border-radius: 100px;
+  box-shadow: 2px 1px 12px;
+}
+.form-container {
+  /* 
+  border: 1px solid red; */
+  height: 70vh;
+  margin-top: 15vh;
+}
+
+.info-container {
+  /*  border: 1px solid red; */
+  border-radius: 0px 10px 10px 0px;
+  padding: 4rem 6rem 6rem 6rem;
+}
+.form-image {
+  /* border: 1px solid red; */
+  background-image: url('../../../assets/images/pexels-marcelo-chagas-1876279.jpg');
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.form-fields {
+}
+
+.form-fields input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+  color: white;
+}
+
+.form-fields input::placeholder {
+  color: #ffffff;
+}
+
+.form-fields input:focus {
+  border: 1px solid red;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo-image {
+  padding-left: 4rem;
+}
