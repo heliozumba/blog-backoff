@@ -17,7 +17,13 @@
       placeholder="Palavra-Passe"
     />
   </div>
-  <button type="submit" class="btn btn-danger btn-block mt-4">Entrar</button>
+  <button
+    type="submit"
+    class="btn btn-danger btn-block mt-4"
+    (click)="callApp()"
+  >
+    Entrar
+  </button>
   <div class="small-text text-center mt-3 text-white">
     <small
       >Não Possui uma Conta?

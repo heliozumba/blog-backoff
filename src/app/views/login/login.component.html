@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" *ngIf="active">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 offset-lg-1 form-container">
@@ -12,7 +12,10 @@
                 class="logo-image img-fluid w-75"
               />
             </div>
-            <app-login-form></app-login-form>
+            <app-login-form
+              [active]="active"
+              (logged)="loggedIn($event)"
+            ></app-login-form>
           </div>
         </div>
       </div>

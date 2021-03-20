@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import { ActivationEnd, Router } from '@angular/router'
 
 @Component({
   selector: 'app-login-form',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  constructor (private route: Router) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit (): void {
+    console.log(this.active)
   }
 
+  @Input() active: Boolean
+
+  @Output() logged = new EventEmitter<boolean>()
+
+  callApp () {
+    alert('here')
+    this.logged.emit(true)
+    this.route.navigate(['/dashboard'])
+  }
 }
