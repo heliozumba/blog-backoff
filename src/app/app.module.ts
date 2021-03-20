@@ -5,7 +5,10 @@ import { RouterModule } from '@angular/router'
 import { LoginComponent } from './views/login/login.component'
 import { LoginFormComponent } from './views/login/login-form/login-form.component'
 import { NotFoundComponent } from './views/not-found/not-found.component'
-import { DashboardComponent } from './views/dashboard/dashboard.component'
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { SidebarComponent } from './views/dashboard/sidebar/sidebar.component';
+import { HeaderComponent } from './views/dashboard/header/header.component';
+import { ViewerComponent } from './views/dashboard/viewer/viewer.component'
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { DashboardComponent } from './views/dashboard/dashboard.component'
     LoginComponent,
     LoginFormComponent,
     NotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent,
+    HeaderComponent,
+    ViewerComponent
   ],
   imports: [
     BrowserModule,
