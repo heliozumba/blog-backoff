@@ -8,7 +8,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component'
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { SidebarComponent } from './views/dashboard/sidebar/sidebar.component';
 import { HeaderComponent } from './views/dashboard/header/header.component';
-import { ViewerComponent } from './views/dashboard/viewer/viewer.component'
+import { ViewerComponent } from './views/dashboard/viewer/viewer.component';
+import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ViewerComponent } from './views/dashboard/viewer/viewer.component'
     DashboardComponent,
     SidebarComponent,
     HeaderComponent,
-    ViewerComponent
+    ViewerComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
