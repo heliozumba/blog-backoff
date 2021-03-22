@@ -10,6 +10,8 @@ import { SidebarComponent } from './views/dashboard/sidebar/sidebar.component'
 import { HeaderComponent } from './views/dashboard/header/header.component'
 import { ViewerComponent } from './views/dashboard/viewer/viewer.component'
 import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.component'
+import { PostAddComponent } from './views/dashboard/viewer/post-add/post-add.component'
+import { QuillModule } from 'ngx-quill'
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.
     SidebarComponent,
     HeaderComponent,
     ViewerComponent,
-    PostListComponent
+    PostListComponent,
+    PostAddComponent
   ],
   imports: [
     BrowserModule,
+    QuillModule.forRoot(),
     RouterModule.forRoot([
       {
         path: 'dashboard',
@@ -35,6 +39,11 @@ import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.
             path: 'post-list',
             component: PostListComponent,
             data: { title: 'Posts' }
+          },
+          {
+            path: 'post-add',
+            component: PostAddComponent,
+            data: { title: 'Novo Post' }
           }
         ]
       }
