@@ -1,0 +1,15 @@
+.action-link:hover {
+  color: #dc3545 !important;
+  transition: 0.3s;
+}
+
+.add-post-button:hover {
+  background-color: #dc3522 !important;
+  border-color: #dc3522 !important;
+}
+
+.page-item.active .page-link {
+  color: white !important;
+  background-color: #343a40;
+  border-color: #343a40;
+}

@@ -1,0 +1,38 @@
+<div class="side-menu">
+  <div class="info-container text-center text-white mt-4">
+    <img
+      src="../../../../assets/images/red_note.png"
+      class="img-fluid w-75 mx-auto"
+      alt=""
+    />
+    <p class="font-weight-bold m-1">Nome do Usuário</p>
+    <small class="font-weight-italic">Função</small>
+  </div>
+
+  <div class="menu text-white mt-5">
+    <ul class="navbar navbar-nav d-block">
+      <li class="dashboard-nav-item nav-item font-weight-bold">
+        <a
+          href="#"
+          [routerLink]="['/dashboard']"
+          class="nav-link dashboard-links text-white"
+          ><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a
+        >
+      </li>
+      <li class="dashboard-nav-item nav-item font-weight-bold">
+        <a
+          href="#"
+          [routerLink]="['/dashboard/post-list']"
+          routerLinkActive="router-link-active"
+          class="nav-link dashboard-links text-white"
+          ><i class="fas fa-music mr-2"></i>Posts</a
+        >
+      </li>
+      <li class="dashboard-nav-item nav-item font-weight-bold">
+        <a href="#" class="nav-link dashboard-links text-white">
+          <i class="fas fa-sign-out-alt mr-2"></i>Sair</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

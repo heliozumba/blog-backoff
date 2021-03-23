@@ -1,0 +1,12 @@
+.top-menu {
+  padding: 1rem;
+  height: 8vh;
+}
+
+.notifications-container li {
+  margin: 0 1rem;
+}
+.notifications-dropdown {
+  left: auto;
+  right: 0;
+}

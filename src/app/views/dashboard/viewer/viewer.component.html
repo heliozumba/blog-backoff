@@ -1,0 +1,12 @@
+<div class="view-panel bg-light">
+  <ngx-loading-bar
+    color="#dc3545"
+    height="4px"
+    position="relative"
+  ></ngx-loading-bar>
+  <div class="container-lg view-container bg-light">
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

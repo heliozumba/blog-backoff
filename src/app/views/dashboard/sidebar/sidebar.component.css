@@ -1,0 +1,13 @@
+.side-menu {
+  height: 92vh;
+  padding: 1rem;
+}
+
+.dashboard-links:hover {
+  background-color: #dc3545;
+  transition: 0.5s;
+}
+
+.notifications {
+  background-color: red;
+}

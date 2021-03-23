@@ -1,0 +1,83 @@
+<div class="post-add-container my-4">
+  <h2 class="mb-4">{{ title }}</h2>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Título" />
+      </div>
+      <p>Categoria:</p>
+      <div class="form-row">
+        <div class="col-9 form-group">
+          <select name="" id="" class="form-control">
+            <option>Música</option>
+            <option>Vídeos</option>
+            <option>Notícias</option>
+            <option>Opiniões</option>
+          </select>
+        </div>
+        <div class="col-3">
+          <label for="file-upload" class="btn btn-dark w-100">
+            <i class="fas fa-camera mr-2"></i>
+            <span *ngIf="edit; else elseBlock"> Alterar Imagem </span>
+            <ng-template #elseBlock>Carregar Imagem</ng-template>
+          </label>
+          <input type="file" class="d-none" id="file-upload" />
+        </div>
+      </div>
+      <div class="mb-4">
+        <p>Descrição:</p>
+        <quill-editor [styles]="{ height: '200px' }"></quill-editor>
+      </div>
+      <p>Links:</p>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"
+            ><i class="fab fa-soundcloud"></i
+          ></span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Soundcloud"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"
+            ><i class="fas fa-play-circle"></i
+          ></span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ficheiro MP3 ou rar"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"
+            ><i class="fab fa-youtube"></i
+          ></span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Youtube"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="button-div text-center">
+        <div *ngIf="edit; else elseBlock2">
+          <button type="submit" class="btn btn-danger w-25">Editar</button>
+        </div>
+        <ng-template #elseBlock2>
+          <button type="submit" class="btn btn-danger w-25">
+            Postar
+          </button></ng-template
+        >
+      </div>
+    </form>
+  </div>
+</div>

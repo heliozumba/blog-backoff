@@ -1,0 +1,74 @@
+<div class="post-list-container mt-5">
+  <h1>Posts</h1>
+  <div class="text-right">
+    <a
+      class="btn btn-dark my-2 add-post-button"
+      [routerLink]="['/dashboard/post-add']"
+    >
+      <i class="fas fa-plus mx-1"></i>Adicionar Post
+    </a>
+  </div>
+  <table class="table table-hover table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Titulo</th>
+        <th>Categoria</th>
+        <th>Data de Publicação</th>
+        <th>Autor</th>
+        <th>Visualizações</th>
+        <th colspan="3">Acções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Uma Noite no Museu</td>
+        <td>Video</td>
+        <td>09/03/2013</td>
+        <td>Jose da Costa</td>
+        <td>10000</td>
+        <td class="text-center">
+          <a
+            href="#"
+            class="action-link"
+            [routerLink]="['/dashboard/post-edit/', 1]"
+          >
+            <i
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Editar"
+              class="fas fa-pencil-alt text-dark action-link"
+            ></i>
+          </a>
+        </td>
+        <td class="text-center">
+          <a href="#" class="action-link"
+            ><i
+              class="fas fa-trash text-dark action-link"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Eliminar"
+            ></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <nav class="">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+      <li class="page-item active">
+        <a class="page-link text-dark" href="#"
+          >2 <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link text-dark" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
