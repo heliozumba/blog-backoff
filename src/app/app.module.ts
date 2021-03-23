@@ -12,6 +12,7 @@ import { ViewerComponent } from './views/dashboard/viewer/viewer.component'
 import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.component'
 import { PostAddComponent } from './views/dashboard/viewer/post-add/post-add.component'
 import { QuillModule } from 'ngx-quill'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { QuillModule } from 'ngx-quill'
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     QuillModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -38,12 +40,12 @@ import { QuillModule } from 'ngx-quill'
           {
             path: 'post-list',
             component: PostListComponent,
-            data: { title: 'Posts' }
+            data: { title: 'Posts', animation: 'postList' }
           },
           {
             path: 'post-add',
             component: PostAddComponent,
-            data: { title: 'Novo Post' }
+            data: { title: 'Novo Post', animation: 'goRight' }
           }
         ]
       }
