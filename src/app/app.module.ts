@@ -15,7 +15,6 @@ import { QuillModule } from 'ngx-quill'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +47,16 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
           {
             path: 'post-add',
             component: PostAddComponent,
-            data: { title: 'Novo Post', animation: 'goRight' }
+            data: {
+              title: 'Adicionar Novo Post',
+              animation: 'goRight',
+              edit: false
+            }
+          },
+          {
+            path: 'post-edit/:id',
+            component: PostAddComponent,
+            data: { title: 'Editar Post', animation: 'goRight', edit: true }
           }
         ]
       }
