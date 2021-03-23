@@ -13,6 +13,8 @@ import { PostListComponent } from './views/dashboard/viewer/post-list/post-list.
 import { PostAddComponent } from './views/dashboard/viewer/post-add/post-add.component'
 import { QuillModule } from 'ngx-quill'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
   ],
   imports: [
     BrowserModule,
+    LoadingBarRouterModule,
     BrowserAnimationsModule,
     QuillModule.forRoot(),
     RouterModule.forRoot([
