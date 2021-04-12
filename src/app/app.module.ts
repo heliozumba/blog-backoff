@@ -14,6 +14,7 @@ import { PostAddComponent } from './views/dashboard/viewer/post-add/post-add.com
 import { QuillModule } from 'ngx-quill'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
     PostAddComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     LoadingBarRouterModule,
     BrowserAnimationsModule,
