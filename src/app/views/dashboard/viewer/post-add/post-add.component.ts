@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router'
 export class PostAddComponent implements OnInit {
   edit: any
   title: any
+  post: Post
 
   constructor (private activactedRoute: ActivatedRoute) {}
 
