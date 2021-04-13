@@ -26,17 +26,17 @@ export class PostAddComponent implements OnInit {
   link: Link
   post_link: PostLink
   post_category: PostCategory
-  links: Link[] = [
+  links: [
     {
-      via: 'soundcloud',
+      via: 'soundcloud'
       url: ''
     },
     {
-      via: 'mp3',
+      via: 'mp3'
       url: ''
     },
     {
-      via: 'youtube',
+      via: 'youtube'
       url: ''
     }
   ]

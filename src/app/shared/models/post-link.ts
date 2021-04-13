@@ -5,4 +5,5 @@ export interface PostLink {
   id: string
   link: Link
   post: Post
+  url: string
 }
