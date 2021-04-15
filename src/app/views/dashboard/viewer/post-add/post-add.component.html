@@ -56,7 +56,6 @@
           class="form-control"
           placeholder="Soundcloud"
           aria-describedby="basic-addon1"
-          [(ngModel)]="links[0].url"
           name="soundcloud"
         />
       </div>
@@ -71,7 +70,6 @@
           class="form-control"
           placeholder="Ficheiro MP3 ou rar"
           aria-describedby="basic-addon1"
-          [(ngModel)]="links[1].url"
           name="mp3"
         />
       </div>
@@ -86,17 +84,12 @@
           class="form-control"
           placeholder="Youtube"
           aria-describedby="basic-addon1"
-          [(ngModel)]="links[2].url"
           name="youtube"
         />
       </div>
       <div class="button-div text-center">
         <div *ngIf="edit; else elseBlock2">
-          <button
-            type="submit"
-            class="btn btn-danger w-25"
-            (click)="showData()"
-          >
+          <button type="submit" class="btn btn-danger w-25" (click)="addPost()">
             Editar
           </button>
         </div>
@@ -105,7 +98,7 @@
             <button
               type="submit"
               class="btn btn-danger w-25"
-              (click)="showData()"
+              (click)="addPost()"
             >
               Postar
             </button>

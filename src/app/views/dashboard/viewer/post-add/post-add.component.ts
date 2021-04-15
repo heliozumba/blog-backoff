@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router'
+import { PostService } from 'src/app/services/post.service'
+import { Category } from 'src/app/shared/models/category'
 import { Link } from 'src/app/shared/models/link'
 import { Post } from 'src/app/shared/models/post'
 import { PostCategory } from 'src/app/shared/models/post-category'
 import { PostLink } from 'src/app/shared/models/post-link'
+import { User } from 'src/app/shared/models/user'
 
 @Component({
   selector: 'app-post-add',
@@ -14,37 +17,51 @@ export class PostAddComponent implements OnInit {
   edit: any
   title: any
   post: Post = {
-    id_post: null,
+    id: 32,
     title: '',
     description: '',
     image: '',
     date: null,
     views: 0,
-    perfil: null,
     username: null
   }
-  link: Link
-  post_link: PostLink
-  post_category: PostCategory
-  links: [
-    {
-      via: 'soundcloud'
-      url: ''
-    },
-    {
-      via: 'mp3'
-      url: ''
-    },
-    {
-      via: 'youtube'
-      url: ''
-    }
-  ]
+  link: Link = {
+    id: null,
+    via: null
+  }
+  post_link: PostLink = {
+    id: null,
+    link: null,
+    post: null,
+    url: ''
+  }
+  post_category: PostCategory = {
+    id: '',
+    category: null,
+    post: null
+  }
+
+  user: User = {
+    username: 'ky',
+    password: '',
+    email: '',
+    nome: '',
+    telefone: '',
+    perfil: { id_perfil: 1, nome: 'Editor' }
+  }
+
+  links: ['', '', '']
+
+  category: Category = {
+    id: 0,
+    name: 'Musica'
+  }
   notSent: any
 
   constructor (
     private activactedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private postService: PostService
   ) {}
 
   ngOnInit (): void {
@@ -60,12 +77,28 @@ export class PostAddComponent implements OnInit {
   }
 
   showData () {
-    this.notSent = false
     console.table(this.post)
     console.table(this.links)
-    var route = this.router
-    setTimeout(function () {
-      route.navigate(['/dashboard/post-list'])
-    }, 3000)
+  }
+
+  addPost () {
+    var router = this.router
+    this.notSent = false
+    this.post.date = new Date().toISOString()
+    this.post.username = this.user.username
+    console.table(this.post)
+    this.postService.createPost(this.post).subscribe(
+      data => {
+        console.log('Post Created')
+        console.table(data)
+        setTimeout(function () {
+          router.navigate(['/dashboard/post-list'])
+        }, 3000)
+      },
+      error => {
+        console.log(error)
+        console.log('Falha no registo')
+      }
+    )
   }
 }

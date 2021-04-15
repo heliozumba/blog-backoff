@@ -53,6 +53,33 @@
       "date": "2021-04-13",
       "views": 133,
       "username": "ky"
+    },
+    {
+      "id": 10,
+      "title": "Juca",
+      "description": "",
+      "image": "",
+      "date": "2021-04-13T12:53:31.106Z",
+      "views": 0,
+      "username": "ky"
+    },
+    {
+      "id": 19,
+      "title": "Jucas",
+      "description": "<p>gsagsagsagsa</p>",
+      "image": "",
+      "date": "2021-04-13T12:57:08.686Z",
+      "views": 0,
+      "username": "ky"
+    },
+    {
+      "id": 32,
+      "title": "Jucas",
+      "description": "<p>qgtux\tc1ghwehewhgfe</p>",
+      "image": "C:\\fakepath\\logo_size_invert.jpg",
+      "date": "2021-04-15T16:36:38.436Z",
+      "views": 0,
+      "username": "ky"
     }
   ],
   "user": [
@@ -155,6 +182,20 @@
       "post": 0,
       "link": 2,
       "url": "http://google.com"
+    }
+  ],
+  "links": [
+    {
+      "id": 0,
+      "via": "soundcloud"
+    },
+    {
+      "id": 1,
+      "via": "mp3"
+    },
+    {
+      "id": 2,
+      "via": "youtube"
     }
   ]
 }

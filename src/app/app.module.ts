@@ -15,6 +15,7 @@ import { QuillModule } from 'ngx-quill'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms'
     PostAddComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     LoadingBarRouterModule,
