@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router'
+import { ImageService } from 'src/app/services/image.service'
 import { PostService } from 'src/app/services/post.service'
+import { ImageSnippetComponent } from 'src/app/shared/image-snippet/image-snippet.component'
 import { Category } from 'src/app/shared/models/category'
 import { Link } from 'src/app/shared/models/link'
 import { Post } from 'src/app/shared/models/post'
@@ -14,13 +16,14 @@ import { User } from 'src/app/shared/models/user'
   styleUrls: ['./post-add.component.css']
 })
 export class PostAddComponent implements OnInit {
+  uploader: ImageSnippetComponent
   edit: any
   title: any
   post: Post = {
-    id: 32,
+    id: null,
     title: '',
     description: '',
-    image: '',
+    image: null,
     date: null,
     views: 0,
     username: null
@@ -61,7 +64,8 @@ export class PostAddComponent implements OnInit {
   constructor (
     private activactedRoute: ActivatedRoute,
     private router: Router,
-    private postService: PostService
+    private postService: PostService,
+    private image: ImageService
   ) {}
 
   ngOnInit (): void {
@@ -84,9 +88,11 @@ export class PostAddComponent implements OnInit {
   addPost () {
     var router = this.router
     this.notSent = false
+    this.post.id = Math.floor(1000000000 * Math.random())
     this.post.date = new Date().toISOString()
     this.post.username = this.user.username
-    console.table(this.post)
+    this.post.image = this.image.getImage().lastModified
+    console.log(this.post)
     this.postService.createPost(this.post).subscribe(
       data => {
         console.log('Post Created')

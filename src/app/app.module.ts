@@ -15,7 +15,8 @@ import { QuillModule } from 'ngx-quill'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
 import { FormsModule } from '@angular/forms'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ImageSnippetComponent } from './shared/image-snippet/image-snippet.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     ViewerComponent,
     PostListComponent,
-    PostAddComponent
+    PostAddComponent,
+    ImageSnippetComponent
   ],
   imports: [
     HttpClientModule,

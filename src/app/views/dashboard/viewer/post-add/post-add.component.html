@@ -22,18 +22,21 @@
           </select>
         </div>
         <div class="col-3">
-          <label for="file-upload" class="btn btn-dark w-100">
+          <!-- <label for="file-upload" class="btn btn-dark w-100">
             <i class="fas fa-camera mr-2"></i>
             <span *ngIf="edit; else elseBlock"> Alterar Imagem </span>
             <ng-template #elseBlock>Carregar Imagem</ng-template>
           </label>
           <input
+            #imageInput
             type="file"
             class="d-none"
             id="file-upload"
-            [(ngModel)]="post.image"
             name="image"
-          />
+            accept="image/*"
+            (change)="processFile(imageInput)"
+          /> -->
+          <app-image-snippet></app-image-snippet>
         </div>
       </div>
       <div class="mb-4">
@@ -89,7 +92,11 @@
       </div>
       <div class="button-div text-center">
         <div *ngIf="edit; else elseBlock2">
-          <button type="submit" class="btn btn-danger w-25" (click)="addPost()">
+          <button
+            type="submit"
+            class="btn btn-danger w-25"
+            (click)="addPost(imageInput)"
+          >
             Editar
           </button>
         </div>

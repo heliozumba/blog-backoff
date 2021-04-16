@@ -4,7 +4,7 @@ export interface Post {
   id: number
   title: string
   description: string
-  image: string
+  image: any
   date: string
   views: number
   username: string
